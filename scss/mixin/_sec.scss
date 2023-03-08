@@ -1,0 +1,33 @@
+@use "../base/vars" as v;
+@use "../mixin/breakpoints"as m;
+
+@mixin sec_01{
+    text-align: center;
+    margin: 0 auto;
+    &__main{
+        display: inline-block;
+        background: linear-gradient(90.62deg, #504337 -3.18%, #B4AE9B 104.14%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        font-weight: 500;
+        font-size: 32px;
+        margin: 0 auto 94px auto;
+        letter-spacing: 12.5%;
+        @include m.mq(pc-s){
+            font-size: 28px;
+            margin: 0 auto 64px auto;
+        }
+        @include m.mq(sp){
+            font-size: 20px;
+            margin: 0 auto 34px auto;
+        }
+        @include m.mq(sp-ss){
+            font-size: 20px;
+        }
+            &__line{
+                display: inline-block;
+            }
+    }
+}

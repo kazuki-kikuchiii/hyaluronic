@@ -1,0 +1,172 @@
+@use "../base/base" as v;
+@use "../mixin/breakpoints" as m;
+@use "../mixin/btn" as btn;
+
+.footer{
+    background-color: #000;
+    color: #fff;
+}
+
+.footer__inner{
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 53px 16px 38px;
+}
+
+.footer__inner__icon-list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.footer__inner__icon-list__item--link img{
+    width: 32px;
+}
+
+.footer__inner__company{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 104px;
+}
+
+.footer__inner__company__item__operation{
+    font-size: 20px;
+    margin-right: 33px;
+    white-space: nowrap;
+}
+
+.footer__inner__company__item__operation--name{
+    font-size: 24px;
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+.footer__inner__company__item--address{
+    margin-right: 24px;
+    white-space: nowrap;
+}
+
+.footer__inner__company__item--url{
+    margin-right: 30px;
+    white-space: nowrap;
+}
+
+.footer__inner__company__item--tel{
+    margin-right: 24px;
+    white-space: nowrap;
+}
+
+.footer__inner__company__item--tel::before{
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+    background-image: url(../../../../addfiles/img/parts/icon-tel_white.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer__inner__company__item--email{
+    display: inline-block;
+    padding-bottom: 1px;
+    border-bottom: solid 1px #fff;
+    white-space: nowrap;
+}
+
+.footer__inner__company__item--email::before{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 13px;
+    background-image: url(../../../../addfiles/img/parts/icon-mail_white.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*コピーライト*/
+.footer__inner__copy{
+    text-align: center;
+    font-size: 16px;
+}
+
+@media screen and (max-width:1366px) {
+
+    .footer__inner__company__item__operation{
+        font-size: 16px;
+        margin-right: 18px;
+    }
+
+    .footer__inner__company__item__operation--name{
+        font-size: 20px;
+    }
+
+    .footer__inner__company__item--url {
+        margin-right: 18px;
+    }
+
+    .footer__inner__company__item--address {
+        margin-right: 18px;
+    }
+
+    .footer__inner__company__item__operation--name {
+        font-size: 20px;
+        margin-left: 8px;
+    }
+}
+
+@media screen and (max-width:1279px) {
+    .footer__inner{
+        padding: 38px 31px;
+    }
+    
+    .footer__inner__icon-list{
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+    
+    .footer__inner__company{
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+    
+    .footer__inner__company__item__operation{
+        margin-bottom: 12px;
+        margin-right: 0px;
+    }
+    
+    
+    .footer__inner__copy--text{
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .footer__inner__company {
+        align-items: flex-start;
+    }
+
+    .footer__inner__company__item__operation {
+        margin-right: 0px;
+    }
+
+    .footer__inner__company__item__operation--name{
+        display: block;
+        font-size: 20px;
+        margin-left: 0px;
+        margin-top: 8px;
+    }
+
+    .footer__inner__icon-list {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width:374px) {
+    .footer__inner__company__item__operation--name{
+        font-size: 19px;
+    }
+}

@@ -1,0 +1,63 @@
+@use "../../../base/vars" as v;
+@use "../../../mixin/breakpoints" as m;
+@use "../../../mixin/sec" as sec;
+
+.solution{
+    &__box{
+        padding: 132px 0 95px;
+        max-width: 1503px;
+        width: 100%;
+        background-image: url(../../../../addfiles/img/top/pc/solution_01.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        background-size: 1503px;
+        margin: 0 auto 126px auto;
+        @include m.mq(pc-s){
+            background-size: 1100px;
+            padding: 96px 0 96px;
+        }
+        @include m.mq(tab){
+            background-size: 768px;
+            padding: 37px 0 37px;
+            margin-top: 96px;
+            margin-bottom: 96px;
+        }
+        @include m.mq(sp){
+            background-size: 468px;
+            padding: 8px 0;
+            margin-top: 0px;
+            margin-bottom: 64px;
+        }
+            &--title{
+                font-size: 32px;
+                letter-spacing: .15em;
+                line-height: 1.7;
+                font-weight: 700;
+                margin-bottom: 537px;
+                @include m.mq(pc-s){
+                    margin-bottom: 400px;
+                }
+                @include m.mq(tab){
+                    margin-bottom: 206px;
+                    font-size: 26px;
+                }
+                @include m.mq(sp){
+                    font-size: 17px;
+                    margin-bottom: 140px;
+                }
+            }
+            &--text{
+                font-size: 24px;
+                line-height: 2.5;
+                letter-spacing: 0.15em;
+                font-weight: 700;
+                @include m.mq(tab){
+                    font-size: 18px;
+                }
+                @include m.mq(sp){
+                    font-size: 12px;
+                }
+            }
+    }
+}

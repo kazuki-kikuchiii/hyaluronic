@@ -1,0 +1,19 @@
+/*style.cssはsassにてコンパイルされていますので、sassでの編集をお願いいたします*/
+@use "../../base/base";
+@use "../../module/header";
+@use "../front-page/block/common";
+@use "../front-page/block/sticky-header";
+@use "../front-page/block/top-kv";
+@use "../front-page/block/merit";
+@use "../front-page/block/recommender";
+@use "../front-page/block/student";
+@use "../front-page/block/problem";
+@use "../front-page/block/solution";
+@use "../front-page/block/case";
+@use "../front-page/block/strength";
+@use "../front-page/block/feature";
+@use "../front-page/block/support";
+@use "../front-page/block/choose";
+
+@use "../front-page/block/distinction";
+@use "../../module/footer";

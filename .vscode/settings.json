@@ -1,0 +1,126 @@
+{
+    "workbench.colorTheme": "GitHub Light",
+    "workbench.iconTheme": "vscode-icons",
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.autoSave": "afterDelay",
+    "intelephense.diagnostics.undefinedFunctions": false,
+    "editor.wordWrap": "on",
+    "bracketPairColorizer.depreciation-notice": false,
+    
+    "dartsass.autoPrefixBrowsersList": [
+        "> 3% in JP",
+        "ie 11",
+        "android 4.4",
+        "last 1 versions"
+    ],
+
+
+//タブ・インデントの幅を指定
+    "editor.tabSize": 2,
+    "liveServer.settings.donotShowInfoMsg": true,
+
+//VSコード内のスペルミスチェックを消す。
+    "cSpell.userWords": [
+        "bloginfo",
+        "cocoro",
+        "nbspstudy",
+        "neko",
+        "pagenation",
+        "postdata"
+    ],
+
+//自動でコメントを付与
+"emmet.syntaxProfiles": {
+    "html": {
+        "filters": "html,c"
+    }
+},
+"emmet.preferences": {
+    "filter.commentAfter": "<!-- /[#ID][.CLASS] -->"
+},
+
+//拡張ツール[intelephenseの設定、wordpressを追加済み]
+    "intelephense.stubs": [
+        "apache",
+        "bcmath",
+        "bz2",
+        "calendar",
+        "com_dotnet",
+        "Core",
+        "ctype",
+        "curl",
+        "date",
+        "dba",
+        "dom",
+        "enchant",
+        "exif",
+        "FFI",
+        "fileinfo",
+        "filter",
+        "fpm",
+        "ftp",
+        "gd",
+        "gettext",
+        "gmp",
+        "hash",
+        "iconv",
+        "imap",
+        "intl",
+        "json",
+        "ldap",
+        "libxml",
+        "mbstring",
+        "meta",
+        "mysqli",
+        "oci8",
+        "odbc",
+        "openssl",
+        "pcntl",
+        "pcre",
+        "PDO",
+        "pdo_ibm",
+        "pdo_mysql",
+        "pdo_pgsql",
+        "pdo_sqlite",
+        "pgsql",
+        "Phar",
+        "posix",
+        "pspell",
+        "readline",
+        "Reflection",
+        "session",
+        "shmop",
+        "SimpleXML",
+        "snmp",
+        "soap",
+        "sockets",
+        "sodium",
+        "SPL",
+        "sqlite3",
+        "standard",
+        "superglobals",
+        "sysvmsg",
+        "sysvsem",
+        "sysvshm",
+        "tidy",
+        "tokenizer",
+        "xml",
+        "xmlreader",
+        "xmlrpc",
+        "xmlwriter",
+        "xsl",
+        "Zend OPcache",
+        "zip",
+        "zlib",
+        "wordpress"
+    ],
+    "workbench.startupEditor": "none",
+    "dartsass.sassBinPath": "node_modules/sass/sass.js",
+    "liveServer.settings.donotVerifyTags": true,
+    "gitlens.advanced.messages": {
+        "suppressGitMissingWarning": true
+    },
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "dartsass.targetDirectory": "static/conpile-css",
+    "liveServer.settings.CustomBrowser": "chrome"
+}

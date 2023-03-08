@@ -1,0 +1,441 @@
+@use "../../../base/vars" as v;
+@use "../../../mixin/breakpoints" as m;
+@use "../../../mixin/sec" as sec;
+
+.recommender{
+    max-width: 1430px;
+    margin: 128px auto;
+    position: relative;
+    padding: 130px 2vw 100px;
+    text-align: center;
+    @include m.mq(pc-s){
+        max-width: 808px;
+    }
+    @include m.mq(tab-s){
+        padding: 24px 2vw 24px;
+        margin: 64px auto;
+    }
+    @include m.mq(sp){
+        margin: 32px auto;
+        padding: 24px 4vw 24px;
+    }
+        .section-title-box{
+            max-width: 514px;
+            @include sec.sec_01;
+            @include m.mq(pc-s){
+                max-width: 450px;
+            }
+            @include m.mq(sp){
+                max-width: 355px;
+            }
+            @include m.mq(sp-ss){
+                max-width: 320px;
+            }
+            &__sub{
+                max-width: 160px;
+                font-size: 24px;
+                background: linear-gradient(90.13deg, #504337 0.06%, #B4AE9B 104.05%);
+                color: #fff;
+                margin: 0 auto 16px auto;
+                padding: 2px 4px;
+                letter-spacing: 9.5%;
+                @include m.mq(pc-s){
+                    font-size: 20px;
+                }
+                @include m.mq(sp){
+                    max-width: 88px;
+                    font-size: 14px;
+                    letter-spacing: -2%;
+                    margin: 0 auto 8px auto;
+                }
+            }
+
+        }
+    &_line{
+        display: inline-block;
+        width: 170px;
+        height: 1px;
+        background-color: #1b1b1b;
+        position: absolute;
+        @include m.mq(pc-s){
+            width: 100px;
+        }
+        @include m.mq(sp){
+            width: 44px;
+        }
+        &-top{
+            top: 8px;
+            left: 8px;
+            @include m.mq(sp){
+                top: 8px;
+                left: 4px;
+            }
+        }
+        &-bottom{
+            bottom: 8px;
+            right: 8px;
+            @include m.mq(sp){
+                bottom: 8px;
+                right: 4px;
+            }
+        }
+        &-top::before,
+        &-bottom::before{
+            content: "";
+            display: inline-block;
+            height: 170px;
+            width: 1px;
+            background-color: #1b1b1b;
+            position: absolute;
+            @include m.mq(pc-s){
+                height: 100px;
+            }
+            @include m.mq(sp){
+                height: 44px;
+            }
+        }
+        &-top::before{
+            top: -8px;
+            left: 8px;
+            @include m.mq(sp){
+                top: -4px;
+                left: 4px;
+            }
+        }
+        &-bottom::before{
+            bottom: -8px;
+            right: 8px;
+            @include m.mq(sp){
+                bottom: -4px;
+                right: 4px;
+            }
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1015px;
+        margin: 0 auto 110px auto;
+        gap: 40px;
+        font-size: 24px;
+        line-height: 1.7;
+        @include m.mq(pc-s){
+            font-size: 18px;
+        }
+        @include m.mq(tab-s){
+            font-size: 18px;
+            max-width: 480px;
+            gap: 24px;
+            margin: 0 auto 64px auto;
+        }
+        @include m.mq(sp){
+            font-size: 14px;
+            margin: 0 auto 32px auto;
+        }
+        &__item{
+            background-image: url(../../../../addfiles/img/top/pc/line_02.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 311px 172px;
+            width: 311px;
+            height: 172px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include m.mq(pc-s){
+                background-size: 214px 132px;
+                width: 214px;
+            }
+            @include m.mq(tab-s){
+                height: 134px;
+            }
+            @include m.mq(sp){
+                background-size: 148px 83px;
+                width: 152px;
+                height: 83px;
+            }
+            &:nth-of-type(2){
+                @include m.mq(tab-s){
+                    order: 3;
+                }
+            }
+            &__text{
+                &--color{
+                    color: #D40026;
+                }
+            }
+        }
+    }
+    &__contents{
+        background-image: url(../../../../addfiles/img/top/pc/recommender_bg_01.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 34px 28px;
+        max-width: 1117px;
+        margin: 0 auto;
+        @include m.mq(pc-s){
+            max-width: 724px;
+        }
+        @include m.mq(tab){
+            background-image: url(../../../../addfiles/img/top/sp/sp-recommender_bg_01.png);
+            background-size: cover;
+        }
+        @include m.mq(sp){
+            padding: 18px 16px;
+        }
+            &__box{
+                background-color: #fff;
+                box-shadow: inset 0px -1px 12px rgba(0, 0, 0, 0.25);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 34px;
+                padding: 44px 48px;
+                position: relative;
+                font-weight: 500;
+                @include m.mq(pc-s){
+                    padding: 18px 20px;
+                }
+                @include m.mq(tab-s){
+                    flex-direction: column;
+                }
+                @include m.mq(sp-s){
+                    padding: 20px 40px;
+                }
+                @include m.mq(sp-other){
+                    padding: 20px 6px;
+                }
+                    //sp時、写真横にテキスト表示
+                    &__sp-box{
+                        display: none;
+                        @include m.mq(tab-s){
+                            display: block;
+                            text-align: left;
+                            line-height: 1.5;
+                        }
+                        @include m.mq(sp){
+                            font-size: 12px;
+                        }
+                        &--author_name{
+                            font-size: 20px;
+                            letter-spacing: .05em;
+                            line-height: 1;
+                        }
+                    }
+                    &--people{
+                        width: 302px;
+                        @include m.mq(pc-s){
+                            width: 200px;
+                        }
+                        @include m.mq(tab-s){
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            gap: 32px;
+                        }
+                        @include m.mq(sp){
+                            gap: 8px;
+                        }
+                        img{
+                            width: 302px;
+                            @include m.mq(pc-s){
+                                width: 200px;
+                            }
+                            @include m.mq(sp){
+                                width: 121px;
+                            }
+                            @include m.mq(sp-ss){
+                                width: 100px;
+                            }
+                        }
+                    }
+                    &--book{
+                        position: absolute;
+                        bottom: -8px;
+                        right: -16px;
+                        width: 180px;
+                        z-index: 1;
+                        @include m.mq(pc-s){
+                            width: 136px;
+                            bottom: -16px;
+                            right: -24px;
+                        }
+                        @include m.mq(tab-s){
+                            width: 206px;
+                            bottom: 12px;
+                            right: 9%;
+                            transform: rotate(-6deg);
+                        }
+                        @include m.mq(sp){
+                            width: 130px;
+                            transform: rotate(0deg);
+                            right: 52px;
+                            bottom: -8px;
+                        }
+                        @include m.mq(sp-s){
+                            width: 130px;
+                            transform: rotate(0deg);
+                            right: 4px;
+                            bottom: -12px;
+                        }
+                    }
+                    &__textarea{
+                        @include m.mq(pc-s){
+                            max-width: 70%;
+                        }
+                        @include m.mq(tab-s){
+                            max-width: 100%;
+                            margin-bottom: 90px;
+                            text-align: left;
+                            max-width: 454px;
+                        }
+                        @include m.mq(sp){
+                            margin-bottom: 0px;
+                            max-width: 300px;
+                        }
+                        &--lead{
+                            font-size: 30px;
+                            letter-spacing: 5%;
+                            margin-bottom: 70px;
+                            line-height: 1.5;
+                            text-align: left;
+                            font-weight: 600;
+                            @include m.mq(pc-s){
+                                font-size: 19px;
+                                margin-bottom: 69px;
+                            }
+                            @include m.mq(sp){
+                                margin-bottom: 60px;
+                                text-align: justify;
+                            }
+                        }
+                        &--best{
+                            position: relative;
+                            z-index: 1;
+                            text-align: center;
+                            margin: 0 72px 58px auto;
+                            width: 424px;
+                            line-height: 35px;
+                            color: #fff;
+                            font-size: 24px;
+                            letter-spacing: 9.5%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            &::before{
+                                transform: skewX(-25deg);
+                                content: ""; /*ボックスを作る*/
+                                position: absolute;
+                                top: 0; bottom: 0; left: 0; right: 0;
+                                z-index: -1;
+                                background: linear-gradient(90.13deg, #504337 0.06%, #B4AE9B 104.05%);
+                            }
+                            @include m.mq(pc-s){
+                                font-size: 20px;
+                                width: 340px;
+                                margin: 0 72px 32px 0;
+                            }
+                            @include m.mq(tab-s){
+                                display: none;
+                            }
+                                //SP時、表示（HTMLにて追記）
+                                &_sp{
+                                    display: none;
+                                    @include m.mq(tab-s){
+                                        display: block;
+                                        position: relative;
+                                        z-index: 1;
+                                        text-align: center;
+                                        width: 160px;
+                                        line-height: 35px;
+                                        color: #fff;
+                                        font-size: 24px;
+                                        letter-spacing: .1em;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin-bottom: 8px;
+                                        @include m.mq(sp){
+                                            width: 118px;
+                                            font-size: 16px;
+                                            line-height: 24px;
+                                        }
+                                    }
+                                    &_first{
+                                        margin-left: 56px;
+                                        @include m.mq(sp){
+                                            margin-left: 0px;
+                                        }
+                                        &::before{
+                                            @include m.mq(tab-s){
+                                                transform: skewX(-25deg);
+                                                content: ""; /*ボックスを作る*/
+                                                position: absolute;
+                                                top: 0; bottom: 0; left: 0; right: 0;
+                                                z-index: -1;
+                                                background: linear-gradient(90.13deg, #504337 0.06%, #B4AE9B 104.05%);
+                                            }
+                                        }
+                                    }
+                                    &_second{
+                                        @include m.mq(tab-s){
+                                            letter-spacing: .05em;
+                                            margin-left: 88px;
+                                        }
+                                        @include m.mq(sp){
+                                            margin-left: 24px;
+                                        }
+                                        &::before{
+                                            @include m.mq(tab-s){
+                                                transform: skewX(-25deg);
+                                                content: ""; /*ボックスを作る*/
+                                                position: absolute;
+                                                top: 0; bottom: 0; left: 0; right: 0;
+                                                z-index: -1;
+                                                background: linear-gradient(90.13deg, #504337 0.06%, #B4AE9B 104.05%);
+                                            }
+                                        }
+                                    }
+                                    &_other{
+                                        display: none;
+                                        @include m.mq(tab-s){
+                                            display: inline-block;
+                                            width: 178px;
+                                            text-align: right;
+                                            margin-right: auto;
+                                        }
+                                        @include m.mq(sp){
+                                            width: 132px;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                                &_sub{
+                                    display: inline-block;
+                                    font-size: 14px;
+                                    letter-spacing: 0;
+                                    margin-left: 27px;
+                                }
+                        }
+                        &--author{
+                            font-size: 16px;
+                            letter-spacing: 5%;
+                            margin-right: 32px;
+                            @include m.mq(pc-s){
+                                text-align: left;
+                            }
+                            //HTMLにて別記載あり
+                            @include m.mq(tab-s){
+                                display: none;
+                            }
+                            &_name{
+                                font-size: 24px;
+                            }
+                        }
+                    }
+            }
+    }
+}

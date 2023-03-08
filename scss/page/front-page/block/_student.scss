@@ -1,0 +1,295 @@
+@use "../../../base/vars" as v;
+@use "../../../mixin/breakpoints" as m;
+@use "../../../mixin/sec" as sec;
+
+.student{
+    padding: 0 2vw;
+    @include m.mq(sp){
+        padding: 0 4vw;
+    }
+    .section-title-box{
+        max-width: 514px;
+        @include sec.sec_01;
+        .section-title-box__main {
+            font-size: 24px;
+        }
+        @include m.mq(pc-s){
+            max-width: 450px;
+        }
+        @include m.mq(sp){
+            max-width: 355px;
+        }
+        @include m.mq(sp-ss){
+            max-width: 320px;
+        }
+    }
+}
+
+.student-acc {
+    max-width: 1040px;
+    min-width: 1040px;
+    margin: 0px auto 100px auto;
+    cursor: pointer;
+    border: solid 2px #685E55;
+    position: relative;
+    @include m.mq(pc-s){
+        max-width: 732px;
+        min-width: 732px;
+    }
+    @include m.mq(tab-s){
+        max-width: 330px;
+        min-width: auto;
+        margin: 0px auto 36
+        px auto;
+    }
+        &__dt{
+            padding: 38px 38px 0px 38px;
+            background-color: #fff;
+            @include m.mq(pc-s){
+                padding: 18px 16px 0px 16px;
+            }
+            @include m.mq(sp){
+                padding: 18px 8px 0px 8px;
+            }
+                &--text{
+                    padding: 0;
+                    margin: 0;
+                }
+                &__contents{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 24px;
+                    font-weight: normal;
+                    @include m.mq(pc-s){
+                        gap: 12px;
+                    }
+                    @include m.mq(tab-s){
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-start;
+                        max-width: 375px;
+
+                    }
+                    &--pic{
+                        min-width: 345px;
+                        @include m.mq(pc-s){
+                            min-width: 230px;
+                            width: 230px;
+                        }
+                        @include m.mq(tab-s){
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+                            gap: 16px;
+                            min-width: auto;
+                            width: auto;
+                            margin-right: auto;
+                        }
+                        img{
+                            @include m.mq(tab-s){
+                                width: 98px;
+                            }
+                        }
+                    }
+                    &__sp{
+                        &__name{
+                            display: none;
+                            @include m.mq(tab-s){
+                                display: inline-block;
+                                font-size: 18px;
+                                line-height: 1.5;
+                            }
+                            &_s{
+                                @include m.mq(tab-s){
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                        &__textarea{
+                            text-align: left;
+                            font-weight: 500;
+                            &--title{
+                                font-size: 32px;
+                                line-height: 1.5;
+                                letter-spacing: .085em;
+                                background: linear-gradient(84.48deg, #504337 7.25%, #B4AE9B 80.31%);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                background-clip: text;
+                                text-fill-color: transparent;
+                                margin-bottom: 32px;
+                                @include m.mq(pc-s){
+                                    font-size: 22px;
+                                }
+                                @include m.mq(tab-s){
+                                    font-size: 18px;
+                                    letter-spacing: 0;
+                                }
+                            }
+                            &__name{
+                                font-size: 24px;
+                                text-align: right;
+                                letter-spacing: .07em;
+                                margin-bottom: 20px;
+                                padding-right: 1em;
+                                @include m.mq(pc-s){
+                                    font-size: 20px;
+                                }
+                                @include m.mq(tab-s){
+                                    display: none;
+                                }
+                                &_s{
+                                    font-size: 14px;
+                                }
+                            }
+                            &__box{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 48px;
+                                background-color: #F9F9F9;
+                                border-radius: 14px;
+                                padding: 10px 16px;
+                                @include m.mq(pc-s){
+                                    gap: 12px;
+                                }
+                                @include m.mq(tab-s){
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 10px 8px;
+                                }
+                                    &__title{
+                                        background-color: #343434;
+                                        letter-spacing: .12em;
+                                        font-size: 14px;
+                                        color: #fff;
+                                        padding: 4px 8px;
+                                        border-radius: 4px;
+                                        white-space: nowrap;
+                                    }
+                                    &__list{
+                                        line-height: 1.5;
+                                        font-size: 14px;
+                                        @include m.mq(tab-s){
+                                            font-size: 12px;
+                                        }
+                                    }
+                            }
+                        }
+                }
+        }
+        &__dd{
+            background-color: #fff;
+            padding: 44px 62px 44px 62px;
+            overflow: hidden;
+            transition: 1s;
+            line-height: 0;
+            color: transparent;
+            text-align: justify;
+            letter-spacing: .07em;
+            font-weight: normal;
+            @include m.mq(pc-s){
+                padding: 44px 32px 44px 32px;
+            }
+            @include m.mq(tab-s){
+                padding: 20px 16px 20px 16px;
+            }
+            &--text{
+                font-size: 16px;
+                position: relative;
+                @include m.mq(sp){
+                    font-size: 14px;
+                }
+                &::after{
+                    content: "…";
+                    display: inline-block;
+                    position: absolute;
+                    right: 0;
+                    top: 8px;
+                    color: #343434;
+                    font-size: 14px;
+                    background-color: #fff;
+                    height: 16px;
+                    width: 16px;
+                    line-height: 16px;
+                    text-align: center;
+                    @include m.mq(sp){
+                        top: 4px;
+                        height: 14px;
+                        width: 14px;
+                        line-height: 14px;
+                    }
+                }
+            }
+        }
+        &__btn{
+            width: 53px;
+            height: 53px;
+            background-color: #685E55;
+            border-radius: 50%;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: -26.5px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            @include m.mq(tab-s){
+                width: 30px;
+                height: 30px;
+                bottom: -16.5px;
+            }
+                &--icon{
+                    display: inline-block;
+                    margin-top: 4px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 23.4px 13.5px 0 13.5px;
+                    border-color: #ffffff transparent transparent transparent;
+                    transition: .3s;
+                    @include m.mq(tab-s){
+                        border-width: 13px 7.5px 0 7.5px;
+                        border-color: #ffffff transparent transparent transparent;
+                        transition: .3s;
+                    }
+                }
+        }
+}
+
+.student-acc__dd:first-line,
+.student-acc.active-1 .student-acc__dd,
+.student-acc.active-2 .student-acc__dd,
+.student-acc.active-3 .student-acc__dd{
+    line-height: 2;
+    color: black;
+    @include m.mq(sp){
+        line-height: 1.5;
+    }
+}
+
+.student-acc.active-1 .student-acc__btn--icon,
+.student-acc.active-2 .student-acc__btn--icon,
+.student-acc.active-3 .student-acc__btn--icon{
+    transform: rotate(60deg);
+    margin-top: 6px;
+    margin-right: 6px;
+    transition: .3s;
+    @include m.mq(tab-s){
+        margin-top: 4px;
+        margin-right: 4px;
+    }
+}
+
+//三点を疑似要素で表現
+.student-acc.active-1 .student-acc__dd--text::after,
+.student-acc.active-2 .student-acc__dd--text::after,
+.student-acc.active-3 .student-acc__dd--text::after{
+    display: none;
+}
+
+

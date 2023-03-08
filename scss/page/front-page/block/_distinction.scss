@@ -1,0 +1,175 @@
+@use "../../../base/vars" as v;
+@use "../../../mixin/breakpoints" as m;
+@use "../../../mixin/sec" as sec;
+
+.distinction{
+    background-image: url(../../../../addfiles/img/top/pc/distinction_01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 1177px;
+    @include m.mq(pc-s){
+        height: 545px;
+        background-size: cover;
+    }
+    @include m.mq(tab){
+        background-image: url(../../../../addfiles/img/top/sp/sp-distinction_01.png);
+    }
+    @include m.mq(sp){
+        background-size: 600px;
+        height: 468px;
+    }
+    @include m.mq(sp-s){
+        background-size: cover;
+        height: 412px;
+    }
+        &__contents{
+            max-width: 1440px;
+            margin: 0 auto;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 500px 2vw 0 2vw;
+            white-space: nowrap;
+            @include m.mq(pc-s){
+                padding: 196px 2vw 0 2vw;
+            }
+            @include m.mq(tab){
+                max-width: 600px;
+            }
+            @include m.mq(sp){
+                max-width: 400px;
+                padding: 238px 2vw 0 2vw;
+            }
+            @include m.mq(sp-s){
+                max-width: 360px;
+                padding: 162px 2vw 0 2vw;
+            }
+            &__lead{
+                font-size: 24px;
+                letter-spacing: .12em;
+                margin: 0 0 22px 1em;
+                line-height: 1.7;
+                @include m.mq(pc-s){
+                    font-size: 16px;
+                }
+                @include m.mq(sp){
+                    font-size: 14px;
+                    margin: 0 0 4px .5em;
+                }
+                    &--r{
+                        display: inline-block;
+                        font-size: 30px;
+                        letter-spacing: .085em;
+                        margin: 0 0 39px 0em;
+                        @include m.mq(pc-s){
+                            font-size: 20px;
+                            margin: 0;
+                        }
+                        @include m.mq(sp){
+                            font-size: 14px;
+                        }
+                    }
+            }
+            &__sub-title{
+                display: inline-block;
+                background-color: #fff;
+                margin-bottom: 22px;
+                padding: 0 8px;
+                @include m.mq(sp){
+                    margin-bottom: 8px;
+                }
+                    &_text{
+                        font-size: 40px;
+                        font-weight: bold;
+                        letter-spacing: .085em;
+                        background: linear-gradient(95.21deg, #504337 -180.65%, #B4AE9B 338.73%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                        @include m.mq(pc-s){
+                            font-size: 27px;
+                        }
+                        @include m.mq(sp){
+                            font-size: 20px;
+                        }
+                    }
+            }
+            &__title{
+                display: inline-block;
+                background-color: #fff;
+                margin-bottom: 22px;
+                @include m.mq(sp){
+                    margin-bottom: 12px;
+                }
+                &_text{
+                    font-size: 63px;
+                    letter-spacing: .085em;
+                    font-weight: bold;
+                    background: linear-gradient(95.21deg, #504337 -180.65%, #B4AE9B 338.73%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                    @include m.mq(pc-s){
+                        font-size: 40px;
+                    }
+                    @include m.mq(sp){
+                        font-size: 24px;
+                        white-space: nowrap;
+                    }
+                    &--space{
+                        display: inline-block;
+                        margin-right: -32px;
+                        @include m.mq(pc-s){
+                            margin-right: -20px;
+                        }
+                        @include m.mq(sp){
+                            margin-right: -10px;
+                        }
+                            &_f{
+                                margin-left: -10px;
+                                @include m.mq(sp){
+                                    margin-left: -4px;
+                                }
+                            }
+                    }
+                    &--s{
+                        font-size: 40px;
+                        letter-spacing: .085em;
+                        @include m.mq(pc-s){
+                            font-size: 28px;
+                        }
+                        @include m.mq(sp){
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+            }
+            &__text{
+                font-size: 28px;
+                letter-spacing: .085em;
+                line-height: 1.7;
+                white-space: nowrap;
+                @include m.mq(pc-s){
+                    font-size: 18px;
+                }
+                @include m.mq(sp){
+                    font-size: 14px;
+                }
+                    &_s{
+                        font-size: 22px;
+                        @include m.mq(pc-s){
+                            font-size: 14px;
+                        }
+                        @include m.mq(sp){
+                            font-size: 14px;
+                        }
+                    }
+            }
+        }
+}

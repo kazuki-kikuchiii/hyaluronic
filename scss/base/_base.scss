@@ -1,0 +1,98 @@
+@charset "utf-8";
+@use "../base/vars" as v;
+@use "../mixin/breakpoints" as m;
+
+/*-----------------------*/
+/*共通(common)*/
+/*-----------------------*/
+
+/*共通変数*/
+:root {
+    --font-family-shippori: 'Shippori Mincho B1', serif;
+    --font-family-italia:'Italianno', cursive;
+}
+/*使用する時は
+font-family:var(--font-family-shippori);
+font-family:var(--font-family-italia);
+*/
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Shippori Mincho B1', serif;
+    overflow-x: hidden;
+}
+
+body.no-scroll{
+    overflow: hidden;
+}
+
+/*レスポンシブ&写真下の隙間を埋める*/
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+//ここからサイト内共通（アニメーション）
+
+//タイトル・見出し(スクロール無しで発動)
+//.fade-inのクラスを付与で実装可能
+.fade-in {
+    animation-name: fade-in-anime;
+    animation-fill-mode:backwards;
+    animation-duration:.6s;
+    animation-iteration-count:1;
+    animation-timing-function:linear;
+    animation-delay: 0.6s;
+    animation-direction:normal;
+    }
+    
+    @keyframes fade-in-anime{
+        0% {
+            opacity: 0;
+        }
+        
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+//タイトル・見出し(スクロールしたら発動)
+//fade-in-triggerのクラスを該当箇所に付与。
+//該当箇所には事前にopacityを0に設定すること。
+//スクロールして、fade-in-triggerの位置まできたら、fade-in-scrollのクラスを付与する
+//jsからのDOM操作あり
+
+.fade-in-trigger{
+    opacity: 0;
+}
+
+.fade-in-scroll {
+    animation-name: fade-in-anime;
+    animation-duration:.6s;
+    animation-fill-mode:forwards;
+    animation-delay: 0.6s;
+    opacity:0;
+    }
+    
+    @keyframes fade-in-anime{
+        0% {
+            opacity: 0;
+        }
+        
+        100% {
+            opacity: 1;
+        }
+    }
+

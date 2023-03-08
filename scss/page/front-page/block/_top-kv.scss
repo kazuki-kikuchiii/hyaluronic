@@ -1,0 +1,513 @@
+@use "../../../base/vars" as v;
+@use "../../../mixin/breakpoints" as m;
+
+/*サイドのヘッダーとTOP-KVを囲んでいる*/
+.top-container{
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    max-width: 1920px;
+    width: 100%;
+}
+
+.top-kv{
+    width: 100%;
+    background-image: url(../../../../addfiles/img/top/pc/top-kv_01.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow-x: hidden;
+    @include m.mq(pc-s){
+        overflow: hidden;
+    }
+}
+
+.top-kv__textarea{
+    margin-left: 9.3vw;
+    margin-right: 16px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 2;
+}
+
+.top-kv__textarea__title--br{
+    display: none;
+}
+
+.top-kv__textarea__title--first,
+.top-kv__textarea__title--second{
+    background-color: rgba(255, 255, 255, .9);
+    mix-blend-mode: screen;
+    display: inline-block;
+    padding: 0 0px;
+    margin-left: -.7px;
+}
+
+.top-kv__textarea__lead{
+    background-color: rgba(255, 255, 255, .9);
+    mix-blend-mode: screen;
+    display: inline-block;
+    padding: 0 0px;
+    font-size: 32px;
+    letter-spacing: .05em;
+    max-width: 690px;
+    white-space: nowrap;
+}
+
+//paddingを取るとアニメーションが動作しない為。
+.top-kv__textarea__lead::before{
+    content: " ";
+    display: inline-block;
+}
+
+.top-kv__textarea__title{
+    font-size: 54px;
+    margin-bottom: 6vh;
+}
+
+@media screen and (max-width:1536px) {
+    .top-kv__textarea {
+        margin: 0 auto;
+    }
+    
+    .top-kv__textarea__title{
+        font-size: 40px;
+        margin-bottom: 6vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .top-kv__textarea__title--first,
+    .top-kv__textarea__title--indent{
+        display: inline-block;
+    }
+    
+    .top-kv__textarea__title--first{
+        margin-bottom: .5em;
+    }
+}
+
+@media screen and (max-width:1279px) {
+    .top-container{
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .top-kv{
+        height: 68vh;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .top-kv__textarea__title {
+        font-size: 30px;
+    }
+    
+    .top-kv__textarea__lead {
+        font-size: 24px;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .top-kv{
+        width: 100%;
+    }
+    
+    .top-kv__textarea__title {
+        margin-bottom: 5vh;
+    }
+    
+    .top-kv__textarea__title {
+        font-size: clamp(24px, 24px, 26px);
+    }
+    
+    .top-kv__textarea__title--first, .top-kv__textarea__title--second {
+        padding: 2px 8px;
+    }
+    
+    .top-kv__textarea__lead {
+        font-size: clamp(14px, 14px, 16px);
+        padding: 2px 0px;
+        box-sizing: border-box;
+        max-width: 304px;
+    }
+}
+
+//スライダー
+
+.top-kv__box{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.top-kv__bg {
+    display: inline-block;
+	width: calc(100% / 3);
+	height: 100%;
+	background-size: 100%;
+    @include m.mq(sp){
+        width: calc(100% / 2);
+    }
+}
+
+.top-kv__bg_1{
+    -webkit-animation: scroll-anim 120s linear infinite;
+            animation: scroll-anim 120s linear infinite;
+    background: url('../../../../addfiles/img/top/pc/top-kv_slide_001.jpg') repeat-y;
+    background-size: contain;
+    -webkit-filter: brightness(60%);
+            filter: brightness(60%);
+            @include m.mq(pc-r){
+                -webkit-animation: scroll-anim-pc-r 120s linear infinite;
+                animation: scroll-anim-pc-r 120s linear infinite;
+            }
+            @include m.mq(pc-s){
+                -webkit-animation: scroll-anim-pc-s 120s linear infinite;
+                animation: scroll-anim-pc-s 120s linear infinite;
+            }
+            @include m.mq(tab-r){
+                -webkit-animation: scroll-anim-tab-r 120s linear infinite;
+                animation: scroll-anim-tab-r 120s linear infinite;
+            }
+            @include m.mq(sp){
+                -webkit-animation: scroll-anim-sp 120s linear infinite;
+                animation: scroll-anim-sp 120s linear infinite;
+            }
+            @include m.mq(sp-s){
+                -webkit-animation: scroll-anim-sp-s 120s linear infinite;
+                animation: scroll-anim-sp-s 120s linear infinite;
+            }
+    
+}
+.top-kv__bg_2{
+    -webkit-animation: scroll-anim-down 120s linear infinite;
+            animation: scroll-anim-down 120s linear infinite;
+    background: url('../../../../addfiles/img/top/pc/top-kv_slide_002.jpg') repeat-y;
+    background-size: contain;
+    -webkit-filter: brightness(60%);
+            filter: brightness(60%);
+            @include m.mq(pc-r){
+                -webkit-animation: scroll-anim-down-pc-r 120s linear infinite;
+                animation: scroll-anim-down-pc-r 120s linear infinite;
+            }
+            @include m.mq(pc-s){
+                -webkit-animation: scroll-anim-down-pc-s 120s linear infinite;
+                animation: scroll-anim-down-pc-s 120s linear infinite;
+            }
+            @include m.mq(tab-r){
+                -webkit-animation: scroll-anim-down-tab-r 120s linear infinite;
+                animation: scroll-anim-down-tab-r 120s linear infinite;
+            }
+            @include m.mq(sp){
+                -webkit-animation: scroll-anim-down-sp 120s linear infinite;
+                animation: scroll-anim-down-sp 120s linear infinite;
+            }
+            @include m.mq(sp-s){
+                -webkit-animation: scroll-anim-down-sp-s 120s linear infinite;
+                animation: scroll-anim-down-sp-s 120s linear infinite;
+            }
+}
+.top-kv__bg_3{
+    -webkit-animation: scroll-anim 120s linear infinite;
+            animation: scroll-anim 120s linear infinite;
+    background: url('../../../../addfiles/img/top/pc/top-kv_slide_003.jpg') repeat-y;
+    background-size: contain;
+    -webkit-filter: brightness(60%);
+            filter: brightness(60%);
+            @include m.mq(pc-r){
+                -webkit-animation: scroll-anim-pc-r 120s linear infinite;
+                animation: scroll-anim-pc-r 120s linear infinite;
+            }
+            @include m.mq(pc-s){
+                -webkit-animation: scroll-anim-pc-s 120s linear infinite;
+                animation: scroll-anim-pc-s 120s linear infinite;
+            }
+            @include m.mq(tab-r){
+                -webkit-animation: scroll-anim-tab-r 120s linear infinite;
+                animation: scroll-anim-tab-r 120s linear infinite;
+            }
+            @include m.mq(sp){
+                display: none;
+            }
+}
+
+//スクロールアニメーション(PC)
+@-webkit-keyframes scroll-anim {
+    0%{
+        background-position-y: 1000%;
+    }
+
+
+	100% {
+		background-position-y: -1000%;
+	}
+}
+@keyframes scroll-anim {
+    0%{
+        background-position-y: 1000%;
+    }
+
+
+	100% {
+		background-position-y: -1000%;
+	}
+}
+
+@-webkit-keyframes scroll-anim-down {
+    0%{
+        background-position-y: -1000%;
+    }
+
+	100% {
+		background-position-y: 1000%;
+	}
+}
+
+@keyframes scroll-anim-down {
+    0%{
+        background-position-y: -1000%;
+    }
+
+	100% {
+		background-position-y: 1000%;
+	}
+}
+
+//スクロールアニメーション(pc-r)
+@-webkit-keyframes scroll-anim-pc-r {
+    0%{
+        background-position-y: 700%;
+    }
+
+	100% {
+		background-position-y: -700%;
+	}
+}
+@keyframes scroll-anim-pc-r {
+    0%{
+        background-position-y: 700%;
+    }
+
+	100% {
+		background-position-y: -700%;
+	}
+}
+
+@-webkit-keyframes scroll-anim-down-pc-r {
+    0%{
+        background-position-y: -700%;
+    }
+
+	100% {
+		background-position-y: 700%;
+	}
+}
+
+@keyframes scroll-anim-down-pc-r {
+    0%{
+        background-position-y: -700%;
+    }
+
+	100% {
+		background-position-y: 700%;
+	}
+}
+
+//スクロールアニメーション(pc-s)
+@-webkit-keyframes scroll-anim-pc-s {
+    0%{
+        background-position-y: 800%;
+    }
+
+	100% {
+		background-position-y: -800%;
+	}
+}
+@keyframes scroll-anim-pc-s {
+    0%{
+        background-position-y: 800%;
+    }
+
+	100% {
+		background-position-y: -800%;
+	}
+}
+
+@-webkit-keyframes scroll-anim-down-pc-s {
+    0%{
+        background-position-y: -800%;
+    }
+
+	100% {
+		background-position-y: 800%;
+	}
+}
+
+@keyframes scroll-anim-down-pc-s {
+    0%{
+        background-position-y: -800%;
+    }
+
+	100% {
+		background-position-y: 800%;
+	}
+}
+
+//スクロールアニメーション(tab-r)
+@-webkit-keyframes scroll-anim-tab-r {
+    0%{
+        background-position-y: 300%;
+    }
+
+	100% {
+		background-position-y: -300%;
+	}
+}
+@keyframes scroll-anim-tab-r {
+    0%{
+        background-position-y: 300%;
+    }
+
+	100% {
+		background-position-y: -300%;
+	}
+}
+
+@-webkit-keyframes scroll-anim-down-tab-r {
+    0%{
+        background-position-y: -300%;
+    }
+
+	100% {
+		background-position-y: 300%;
+	}
+}
+
+@keyframes scroll-anim-down-tab-r {
+    0%{
+        background-position-y: -300%;
+    }
+
+	100% {
+		background-position-y: 300%;
+	}
+}
+
+//スクロールアニメーション(sp)
+@-webkit-keyframes scroll-anim-sp {
+    0%{
+        background-position-y: 300%;
+    }
+
+	100% {
+		background-position-y: -300%;
+	}
+}
+@keyframes scroll-anim-sp {
+    0%{
+        background-position-y: 300%;
+    }
+
+	100% {
+		background-position-y: -300%;
+	}
+}
+
+@-webkit-keyframes scroll-anim-down-sp {
+    0%{
+        background-position-y: -300%;
+    }
+
+	100% {
+		background-position-y: 300%;
+	}
+}
+
+@keyframes scroll-anim-down-sp {
+    0%{
+        background-position-y: -300%;
+    }
+
+	100% {
+		background-position-y: 300%;
+	}
+}
+
+//スクロールアニメーション(sp-s)
+@-webkit-keyframes scroll-anim-sp-s {
+    0%{
+        background-position-y: 175%;
+    }
+
+	100% {
+		background-position-y: -175%;
+	}
+}
+@keyframes scroll-anim-sp-s {
+    0%{
+        background-position-y: 175%;
+    }
+
+	100% {
+		background-position-y: -175%;
+	}
+}
+
+@-webkit-keyframes scroll-anim-down-sp-s {
+    0%{
+        background-position-y: -175%;
+    }
+
+	100% {
+		background-position-y: 175%;
+	}
+}
+
+@keyframes scroll-anim-down-sp-s {
+    0%{
+        background-position-y: -175%;
+    }
+
+	100% {
+		background-position-y: 175%;
+	}
+}
+
+
+.js-slide-in__top{
+    display: inline-block;
+    width: 0%;
+    white-space:nowrap;
+    overflow:hidden;
+    animation:js-slide-in__top 1s .6s cubic-bezier(0.76, 0.02, 0.64, 0.13) forwards;
+}
+
+@keyframes js-slide-in__top {
+
+    from {
+        width:0%;
+    }
+    
+    to {
+        width:100%;
+    }
+
+    }
+
