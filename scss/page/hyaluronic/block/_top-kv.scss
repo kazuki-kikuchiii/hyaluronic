@@ -1,3 +1,37 @@
 @use "../../../base/vars" as v;
 @use "../../../mixin/breakpoints" as m;
 @use "../../../mixin/sec" as sec;
+
+.top-kv{
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url(../../../../static/image/menu/hyaluronic/pc/top-kv-bg_01.png);
+    &__box{
+      max-width: 1566px;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 130px;
+      &--title{
+        max-width: 1166px;
+        margin: 0 auto;
+          img{
+            max-width: 866px;
+            width: 100%;
+          }
+      }
+      &__inner{
+        max-width: 1496px;
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 200px;
+      }
+      &__lead{
+        font-family:var(--font-family-shippori);
+        max-width: 489px;
+        width: 100%;
+        font-size: 34px;
+        color:var(--color_01);
+      }
+    }
+}
