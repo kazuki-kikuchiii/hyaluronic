@@ -1,16 +1,15 @@
 $breakpoint: (
-    sp-ss: 'screen and (max-width: 374px)',
-    sp-other: 'screen and (max-width: 400px)',
+    sp-xs: 'screen and (max-width: 374px)',
     sp-s: 'screen and (max-width: 468px)',
     sp: 'screen and (max-width: 600px)',
     tab-s: 'screen and (max-width: 767px)',
     tab: 'screen and (max-width: 768px)',
-    tab-x: 'screen and (max-width: 900px)',
-    tab-r: 'screen and (max-width: 1080px)',
+    tab-l: 'screen and (max-width: 900px)',
+    tab-xl: 'screen and (max-width: 1080px)',
     pc-s: 'screen and (max-width: 1279px)',
     pc: 'screen and (max-width: 1366px)',
-    pc-r: 'screen and (max-width: 1566px)',
-    pc-xr: 'screen and (max-width: 1919px)',
+    pc-l: 'screen and (max-width: 1536px)',
+    pc-xl: 'screen and (max-width: 1919px)',
 );
 
     @mixin mq($bp) {

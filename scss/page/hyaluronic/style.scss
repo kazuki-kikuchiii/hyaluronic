@@ -1,0 +1,5 @@
+/*style.cssはsassにてコンパイルされていますので、sassでの編集をお願いいたします*/
+@use "../../base/base";
+@use "../../module/header";
+@use "../front-page/block/common";
+@use "../front-page/block/top-kv";
