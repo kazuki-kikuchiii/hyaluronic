@@ -1,6 +1,18 @@
 @use "../base/vars" as v;
 @use "../mixin/breakpoints"as m;
 
+// 各セクションのタイトル(日本語込)
 @mixin sec_01{
-    
+  font-family:var(--font-family-jost);
+  font-size: 100px;
+  text-transform:uppercase;
+  color:var(--color_02);
+  line-height: 1;
+  &__main{
+    font-family:var(--font-family-noto);
+    font-size: 30px;
+    letter-spacing: .09em;
+    color: #000;
+    font-weight: 500;
+  }
 }

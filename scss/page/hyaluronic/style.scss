@@ -1,3 +1,8 @@
 /*style.cssはsassにてコンパイルされていますので、sassでの編集をお願いいたします*/
 @use "../../base/base";
 @use "../hyaluronic/block/top-kv";
+@use "../hyaluronic/block/cta";
+@use "../hyaluronic/block/menu";
+@use "../hyaluronic/block/about";
+@use "../hyaluronic/block/recommend";
+@use "../hyaluronic/block/parts";

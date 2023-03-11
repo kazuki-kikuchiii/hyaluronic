@@ -1,0 +1,32 @@
+@use "../../../base/vars" as v;
+@use "../../../mixin/breakpoints" as m;
+@use "../../../mixin/sec" as sec;
+
+.about{
+  padding-bottom: 128px;
+  .section-title{
+    @include sec.sec_01;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  &__t-box{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 96px;
+    font-size: 18px;
+    letter-spacing: .06em;
+    line-height: 1.7;
+    &--text{
+      &:nth-of-type(1){
+        margin-bottom: 1em;
+      }
+    }
+  }
+  &__pic-box{
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

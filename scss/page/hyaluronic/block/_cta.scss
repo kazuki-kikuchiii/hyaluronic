@@ -1,0 +1,52 @@
+@use "../../../base/vars" as v;
+@use "../../../mixin/breakpoints" as m;
+
+.reserve{
+    max-width: 370px;
+    width: 100%;
+    margin: 24px auto;
+    text-align: center;
+  &__text{
+    font-size: 18px;
+    letter-spacing: .04em;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    position: relative;
+    &::before,
+    &::after{
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 32px;
+      background: #000;
+      position: absolute;
+      bottom: 0;
+    }
+    &::before{
+      transform: rotate(-25deg);
+      left: 0;
+    }
+    &::after{
+      transform: rotate(25deg);
+      right: 0;
+    }
+  }
+  &__button{
+    &--link{
+      display: inline-block;
+      max-width: 360px;
+      width: 100%;
+      line-height: 52px;
+      letter-spacing: .06em;
+      font-size: 24px;
+      color: #fff;
+      background: linear-gradient(180deg, #05ED64 0%, #0BBA53 100%);
+      background-blend-mode: multiply;
+      border-radius: 7px;
+      transition: .3s;
+      &:hover{
+        opacity: 0.6; filter: brightness(100%);
+      }
+    }
+  }
+}

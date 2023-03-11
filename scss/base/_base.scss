@@ -13,6 +13,7 @@
     --font-family-shippori:'Shippori Mincho B1', serif;
     --font-family-roboto:'Roboto', sans-serif;
     --color_01:#F27C98;
+    --color_02:#F8E2EC;
 }
 /*使用する時は
 font-family:var(--font-family-noto);
@@ -20,6 +21,7 @@ font-family:var(--font-family-jost);
 font-family:var(--font-family-shippori);
 font-family:var(--font-family-roboto);
 color:var(--color_01);
+color:var(--color_02);
 */
 
 html{
@@ -45,5 +47,19 @@ li {
 
 a {
     text-decoration: none;
+}
+
+//セクション全体を囲む
+.section-wrapper-bg{
+    background-image: url(../../../../static/image/menu/hyaluronic/pc/bg_01.png);
+    background-repeat: no-repeat;
+    background-position: 1% 1%;
+    max-width: 1920px;
+    margin: 0 auto;
+    &__inner{
+        max-width: 1296px;
+        margin: 0 auto;
+        padding: 0 2vw;
+    }
 }
 
