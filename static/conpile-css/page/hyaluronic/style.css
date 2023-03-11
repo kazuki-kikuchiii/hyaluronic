@@ -407,10 +407,9 @@ a {
   color: #000;
   font-weight: 500;
 }
-.parts__pic-box {
-  max-width: 968px;
-  width: 100%;
-  margin: 0 auto;
+.parts__contents {
+  background-image: url(../../../../static/image/menu/hyaluronic/pc/parts_01.png);
+  background-repeat: no-repeat;
 }
 
 /*style.cssはsassにてコンパイルされていますので、sassでの編集をお願いいたします*/
