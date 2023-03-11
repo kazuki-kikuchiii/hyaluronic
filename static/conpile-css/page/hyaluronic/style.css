@@ -410,6 +410,10 @@ a {
 .parts__contents {
   background-image: url(../../../../static/image/menu/hyaluronic/pc/parts_01.png);
   background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 1040px;
+  height: 812px;
+  margin: 0 auto;
 }
 
 /*style.cssはsassにてコンパイルされていますので、sassでの編集をお願いいたします*/
