@@ -10,6 +10,7 @@
   --font-family-roboto:"Roboto", sans-serif;
   --color_01:#F27C98;
   --color_02:#F8E2EC;
+  --color_03:#F499C2;
 }
 
 /*使用する時は
@@ -19,6 +20,7 @@ font-family:var(--font-family-shippori);
 font-family:var(--font-family-roboto);
 color:var(--color_01);
 color:var(--color_02);
+color:var(--color_03);
 */
 html {
   font-size: 62.5%;
@@ -414,6 +416,279 @@ a {
   width: 1040px;
   height: 812px;
   margin: 0 auto;
+}
+
+.insta {
+  padding-bottom: 128px;
+}
+.insta .section-title {
+  font-family: var(--font-family-jost);
+  font-size: 100px;
+  text-transform: uppercase;
+  color: var(--color_02);
+  line-height: 1;
+  text-align: center;
+  padding-bottom: 64px;
+}
+.insta .section-title__main {
+  font-family: var(--font-family-noto);
+  font-size: 30px;
+  letter-spacing: 0.09em;
+  color: #000;
+  font-weight: 500;
+}
+.insta__contents {
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.point {
+  padding-bottom: 128px;
+}
+.point .section-title {
+  font-family: var(--font-family-jost);
+  font-size: 100px;
+  text-transform: uppercase;
+  color: var(--color_02);
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 96px;
+}
+.point .section-title__main {
+  font-family: var(--font-family-noto);
+  font-size: 30px;
+  letter-spacing: 0.09em;
+  color: #000;
+  font-weight: 500;
+}
+.point__list {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.point__list__item {
+  margin-bottom: 124px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 96px;
+  margin-bottom: 96px;
+}
+.point__list__item:last-of-type {
+  margin-bottom: 0;
+}
+.point__list__item__textarea {
+  max-width: 50%;
+  width: 100%;
+}
+.point__list__item__textarea--num {
+  font-family: var(--font-family-jost);
+  color: var(--color_02);
+  font-size: 80px;
+  font-weight: 600;
+}
+.point__list__item__textarea--title {
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: 0.09em;
+  margin-bottom: 32px;
+}
+.point__list__item__textarea--text {
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+.point__list__item--pic {
+  max-width: 50%;
+  width: 100%;
+}
+
+.type {
+  padding-bottom: 128px;
+}
+.type .section-title {
+  font-family: var(--font-family-jost);
+  font-size: 100px;
+  text-transform: uppercase;
+  color: var(--color_02);
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 96px;
+}
+.type .section-title__main {
+  font-family: var(--font-family-noto);
+  font-size: 30px;
+  letter-spacing: 0.09em;
+  color: #000;
+  font-weight: 500;
+}
+.type__box {
+  border: solid 1px #000;
+  background-color: #fff;
+  padding: 64px 68px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 64px;
+}
+.type__box--image {
+  max-width: 498px;
+  width: 100%;
+  margin: 0 auto 12px auto;
+}
+.type__box__title {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  margin-bottom: 64px;
+  text-align: center;
+}
+.type__box__title--country {
+  display: inline-block;
+  font-size: 18px;
+  padding: 8px 12px;
+  border: solid 1px #000;
+  margin-left: 12px;
+  vertical-align: text-bottom;
+}
+.type__box__t-title {
+  display: inline-block;
+  font-size: 30px;
+  border-bottom: solid 4px var(--color_03);
+  margin: 64px auto 36px auto;
+}
+.type__t-price {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.type__t-price--unit {
+  display: inline-block;
+  font-size: 18px;
+  letter-spacing: 0.045em;
+  padding: 4px 8px;
+  border: solid 1px #000;
+}
+.type__t-price--money {
+  font-family: var(--font-family-roboto);
+  color: var(--color_03);
+  font-size: 60px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0em;
+  margin-left: 18px;
+}
+.type__t-price--tax {
+  display: inline-block;
+  font-size: 18px;
+  margin-top: auto;
+  margin-left: 12px;
+  padding-bottom: 12px;
+}
+.type__t-price--tax_in {
+  font-size: 14px;
+}
+.type__b-textarea {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 64px 0;
+}
+.type__b-textarea__title {
+  font-size: 30px;
+  letter-spacing: 0.025em;
+  text-align: center;
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+.type__b-textarea__text {
+  max-width: 840px;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 2.6;
+}
+.type__b-textarea__text--line {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5em;
+  text-decoration-color: rgba(255, 228, 0, 0.4);
+  text-underline-offset: -0.2em;
+  text-decoration-skip-ink: none;
+}
+
+/*アコーディオン実装用CSS*/
+summary {
+  /* display: list-item;以外を指定してデフォルトの三角形アイコンを消します */
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  /* Safariで表示されるデフォルトの三角形アイコンを消します */
+  display: none;
+}
+
+.summary_inner {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border: 1px solid #d2beff;
+  font-weight: bold;
+  color: #002255;
+}
+
+.icon {
+  display: block;
+  position: relative;
+  width: 24px;
+  margin-left: 6px;
+  flex-shrink: 0;
+  transform-origin: center 43%;
+  transition: transform 0.4s;
+}
+
+/*details[open] .icon {*/
+/*  transform: rotate(180deg);*/
+/*}*/
+/* is-openedクラスが付与されたときのスタイル */
+details.is-opened .icon {
+  transform: rotate(180deg);
+}
+
+/* アイコンのバーのスタイル */
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 3px;
+  background-color: #7050ff;
+}
+
+.icon::before {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.icon::after {
+  right: 0;
+  transform: rotate(-45deg);
+}
+
+/* --------アコーディオンの中身のスタイル-------- */
+.content {
+  overflow: hidden;
+  background-color: #f0f2ff;
+  /* details直下のタグにpaddingを設定すると挙動がおかしくなるので、ここには指定しない */
+}
+
+.content_inner {
+  padding: 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 /*style.cssはsassにてコンパイルされていますので、sassでの編集をお願いいたします*/

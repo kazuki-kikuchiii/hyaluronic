@@ -1,0 +1,182 @@
+@use "../../../base/vars" as v;
+@use "../../../mixin/breakpoints" as m;
+@use "../../../mixin/sec" as sec;
+
+.type{
+  padding-bottom: 128px;
+  .section-title{
+    @include sec.sec_01;
+    text-align: center;
+    margin-bottom: 96px;
+  }
+  &__box{
+    border: solid 1px #000;
+    background-color: #fff;
+    padding: 64px 68px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 64px;
+    &--image{
+      max-width: 498px;
+      width: 100%;
+      margin: 0 auto 12px auto;
+    }
+    &__title{
+      font-size: 30px;
+      font-weight: 500;
+      letter-spacing: .09em;
+      margin-bottom: 64px;
+      text-align: center;
+      &--country{
+        display: inline-block;
+        font-size: 18px;
+        padding: 8px 12px;
+        border: solid 1px #000;
+        margin-left: 12px;
+        vertical-align: text-bottom;
+      }
+    }
+    &__t-title{
+      display: inline-block;
+      font-size: 30px;
+      border-bottom: solid 4px var(--color_03);
+      margin: 64px auto 36px auto;
+    }
+  }
+  &__t-price{
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      &--unit{
+        display: inline-block;
+        font-size: 18px;
+        letter-spacing: .045em;
+        padding: 4px 8px;
+        border: solid 1px #000;
+      }
+      &--money{
+        font-family:var(--font-family-roboto);
+        color: var(--color_03);
+        font-size: 60px;
+        font-weight: bold;
+        font-style: italic;
+        letter-spacing: .0em;
+        margin-left: 18px;
+      }
+      &--tax{
+        display: inline-block;
+        font-size: 18px;
+        margin-top: auto;
+        margin-left: 12px;
+        padding-bottom: 12px;
+        &_in{
+          font-size: 14px;
+        }
+      }
+  }
+  &__b-textarea{
+    background-color: rgba(255,255,255,.7);
+    padding: 64px 0;
+    &__title{
+      font-size: 30px;
+      letter-spacing: .025em;
+      text-align: center;
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+    &__text{
+      max-width: 840px;
+      width: 100%;
+      margin: 0 auto;
+      line-height: 2.6;
+      &--line{
+        text-decoration: underline;
+        text-decoration-thickness: 0.5em;
+        text-decoration-color: rgba(255, 228, 0, 0.4);
+        text-underline-offset: -0.2em;
+        text-decoration-skip-ink: none; 
+      }
+    }
+  }
+}
+
+/*アコーディオン実装用CSS*/
+summary {
+  /* display: list-item;以外を指定してデフォルトの三角形アイコンを消します */
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  /* Safariで表示されるデフォルトの三角形アイコンを消します */
+  display: none;
+}
+
+.summary_inner{
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border: 1px solid #d2beff;
+  font-weight: bold;
+  color: #002255;
+}
+
+.icon {
+  display: block;
+  position: relative;
+  width: 24px;
+  margin-left: 6px;
+  flex-shrink: 0;
+  transform-origin: center 43%;
+  transition: transform 0.4s;
+}
+
+/*details[open] .icon {*/
+/*  transform: rotate(180deg);*/
+/*}*/
+
+/* is-openedクラスが付与されたときのスタイル */
+details.is-opened .icon {
+  transform: rotate(180deg);
+}
+
+/* アイコンのバーのスタイル */
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 3px;
+  background-color: #7050ff;
+}
+
+.icon::before {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.icon::after {
+  right: 0;
+  transform: rotate(-45deg);
+}
+
+/* --------アコーディオンの中身のスタイル-------- */
+.content {
+  overflow: hidden;
+  background-color: #f0f2ff;
+
+  /* details直下のタグにpaddingを設定すると挙動がおかしくなるので、ここには指定しない */
+}
+
+.content_inner {
+  padding: 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

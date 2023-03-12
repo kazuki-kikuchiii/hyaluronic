@@ -1,0 +1,17 @@
+@use "../../../base/vars" as v;
+@use "../../../mixin/breakpoints" as m;
+@use "../../../mixin/sec" as sec;
+
+.insta{
+  padding-bottom: 128px;
+  .section-title{
+    @include sec.sec_01;
+    text-align: center;
+    padding-bottom: 64px;
+  }
+  &__contents{
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
