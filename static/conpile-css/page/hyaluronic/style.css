@@ -65,6 +65,20 @@ a {
   margin: 0 auto;
   padding: 0 2vw;
 }
+@media screen and (max-width: 599px) {
+  .section-wrapper-bg__inner {
+    padding: 0 4vw;
+  }
+}
+
+.br-sp {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .br-sp {
+    display: block;
+  }
+}
 
 .top-kv__br_tab-xl {
   display: block;
@@ -624,6 +638,7 @@ a {
 }
 @media screen and (max-width: 599px) {
   .menu .section-title__main {
+    line-height: 1.2;
     font-size: 24px;
   }
 }
@@ -729,6 +744,11 @@ a {
 .about {
   padding-bottom: 128px;
 }
+@media screen and (max-width: 599px) {
+  .about {
+    padding-bottom: 80px;
+  }
+}
 .about .section-title {
   font-family: var(--font-family-jost);
   font-size: 100px;
@@ -762,6 +782,7 @@ a {
 }
 @media screen and (max-width: 599px) {
   .about .section-title__main {
+    line-height: 1.2;
     font-size: 24px;
   }
 }
@@ -843,6 +864,7 @@ a {
 }
 @media screen and (max-width: 599px) {
   .recommend .section-title__main {
+    line-height: 1.2;
     font-size: 24px;
   }
 }
@@ -875,6 +897,11 @@ a {
 
 .parts {
   padding-bottom: 128px;
+}
+@media screen and (max-width: 599px) {
+  .parts {
+    padding-bottom: 80px;
+  }
 }
 .parts .section-title {
   font-family: var(--font-family-jost);
@@ -909,7 +936,18 @@ a {
 }
 @media screen and (max-width: 599px) {
   .parts .section-title__main {
+    line-height: 1.2;
     font-size: 24px;
+  }
+}
+@media screen and (max-width: 1535px) {
+  .parts .section-title {
+    margin-bottom: 64px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .parts .section-title {
+    margin-bottom: 32px;
   }
 }
 .parts__contents {
@@ -917,17 +955,24 @@ a {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 1040px;
-  height: 812px;
+  height: 840px;
   margin: 0 auto;
 }
-@media screen and (max-width: 1919px) {
+@media screen and (max-width: 1535px) {
   .parts__contents {
-    width: 560px;
-    height: 440px;
+    width: 760px;
+    height: 600px;
+  }
+}
+@media screen and (max-width: 1079px) {
+  .parts__contents {
+    width: 468px;
+    height: 364px;
   }
 }
 @media screen and (max-width: 599px) {
   .parts__contents {
+    background-image: url(../../../../static/image/menu/hyaluronic/sp/parts_01.png);
     width: 337px;
     height: 419px;
   }
@@ -935,6 +980,11 @@ a {
 
 .insta {
   padding-bottom: 128px;
+}
+@media screen and (max-width: 599px) {
+  .insta {
+    padding-bottom: 80px;
+  }
 }
 .insta .section-title {
   font-family: var(--font-family-jost);
@@ -969,7 +1019,13 @@ a {
 }
 @media screen and (max-width: 599px) {
   .insta .section-title__main {
+    line-height: 1.2;
     font-size: 24px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .insta .section-title {
+    padding-bottom: 32px;
   }
 }
 .insta__contents {
@@ -1014,12 +1070,33 @@ a {
 }
 @media screen and (max-width: 599px) {
   .point .section-title__main {
+    line-height: 1.2;
     font-size: 24px;
+  }
+}
+@media screen and (max-width: 1535px) {
+  .point .section-title {
+    margin-bottom: 64px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .point .section-title {
+    margin-bottom: 48px;
   }
 }
 .point__list {
   max-width: 1024px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1279px) {
+  .point__list {
+    max-width: 824px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .point__list {
+    max-width: 600px;
+  }
 }
 .point__list__item {
   margin-bottom: 124px;
@@ -1029,18 +1106,61 @@ a {
   gap: 96px;
   margin-bottom: 96px;
 }
+@media screen and (max-width: 1279px) {
+  .point__list__item {
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 64px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .point__list__item {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 599px) {
+  .point__list__item {
+    margin-bottom: 32px;
+  }
+}
 .point__list__item:last-of-type {
   margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .point__list__item_even {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
 }
 .point__list__item__textarea {
   max-width: 50%;
   width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .point__list__item__textarea {
+    max-width: 100%;
+  }
+}
+.point__list__item__textarea_even {
+  text-align: right;
 }
 .point__list__item__textarea--num {
   font-family: var(--font-family-jost);
   color: var(--color_02);
   font-size: 80px;
   font-weight: 600;
+  letter-spacing: 0.05em;
+}
+@media screen and (max-width: 1279px) {
+  .point__list__item__textarea--num {
+    font-size: 64px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .point__list__item__textarea--num {
+    font-size: 46px;
+  }
 }
 .point__list__item__textarea--title {
   font-size: 28px;
@@ -1048,14 +1168,35 @@ a {
   letter-spacing: 0.09em;
   margin-bottom: 32px;
 }
+@media screen and (max-width: 1279px) {
+  .point__list__item__textarea--title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 467px) {
+  .point__list__item__textarea--title {
+    font-size: 22px;
+  }
+}
 .point__list__item__textarea--text {
   font-size: 16px;
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
+@media screen and (max-width: 599px) {
+  .point__list__item__textarea--text {
+    font-size: 14px;
+  }
+}
 .point__list__item--pic {
   max-width: 50%;
   width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .point__list__item--pic {
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 .type {
@@ -1094,6 +1235,7 @@ a {
 }
 @media screen and (max-width: 599px) {
   .type .section-title__main {
+    line-height: 1.2;
     font-size: 24px;
   }
 }

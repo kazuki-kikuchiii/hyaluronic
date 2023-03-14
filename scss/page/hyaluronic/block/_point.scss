@@ -8,10 +8,22 @@
     @include sec.sec_01;
     text-align: center;
     margin-bottom: 96px;
+    @include m.mq(pc-l){
+      margin-bottom: 64px;
+    }
+    @include m.mq(sp){
+      margin-bottom: 48px;
+    }
   }
   &__list{
     max-width: 1024px;
     margin: 0 auto;
+    @include m.mq(pc-s){
+      max-width: 824px;
+    }
+    @include m.mq(tab){
+      max-width: 600px;
+    }
     &__item{
       margin-bottom: 124px;
       display: flex;
@@ -19,33 +31,77 @@
       justify-content: space-between;
       gap: 96px;
       margin-bottom: 96px;
+      @include m.mq(pc-s){
+        gap: 32px;
+        align-items:center;
+        margin-bottom: 64px;
+      }
+      @include m.mq(tab){
+        flex-direction: column;
+      }
+      @include m.mq(sp){
+        margin-bottom: 32px;
+      }
       &:last-of-type{
         margin-bottom: 0;
+      }
+      &_even{
+        @include m.mq(tab){
+          flex-direction: column-reverse;
+          align-items: flex-end;
+          justify-content: flex-end;
+        }
       }
       &__textarea{
         max-width: 50%;
         width: 100%;
+        @include m.mq(tab){
+          max-width: 100%;
+        }
+        &_even{
+          text-align: right;
+        }
         &--num{
           font-family:var(--font-family-jost);
           color:var(--color_02);
           font-size: 80px;
           font-weight: 600;
+          letter-spacing: .05em;
+          @include m.mq(pc-s){
+            font-size: 64px;
+          }
+          @include m.mq(sp){
+            font-size: 46px;
+          }
         }
         &--title{
           font-size: 28px;
           line-height: 1.5;
           letter-spacing: .09em;
           margin-bottom: 32px;
+          @include m.mq(pc-s){
+            font-size: 24px;
+          }
+          @include m.mq(sp-s){
+            font-size: 22px;
+          }
         }
         &--text{
           font-size: 16px;
           line-height: 1.7;
           letter-spacing: .03em;
+          @include m.mq(sp){
+            font-size: 14px;
+          }
         }
       }
       &--pic{
         max-width: 50%;
         width: 100%;
+        @include m.mq(tab){
+          max-width: 100%;
+          text-align:center;
+        }
       }
     }
   }

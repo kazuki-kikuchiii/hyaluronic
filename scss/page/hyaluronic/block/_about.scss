@@ -4,6 +4,9 @@
 
 .about{
   padding-bottom: 128px;
+  @include m.mq(sp){
+    padding-bottom: 80px;
+  }
   .section-title{
     @include sec.sec_01;
     text-align: center;

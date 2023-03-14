@@ -4,10 +4,16 @@
 
 .insta{
   padding-bottom: 128px;
+  @include m.mq(sp){
+    padding-bottom: 80px;
+  }
   .section-title{
     @include sec.sec_01;
     text-align: center;
     padding-bottom: 64px;
+    @include m.mq(sp){
+      padding-bottom: 32px;
+    }
   }
   &__contents{
     max-width: 550px;
