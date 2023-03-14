@@ -16,5 +16,13 @@
     width: 1040px;
     height: 812px;
     margin: 0 auto;
+    @include m.mq(pc-xl){
+      width: 560px;
+      height: 440px;
+    }
+    @include m.mq(sp){
+      width: 337px;
+      height: 419px;
+    }
   }
 }

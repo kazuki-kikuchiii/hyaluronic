@@ -1,14 +1,40 @@
 $breakpoint: (
+
+    //360px × 720px
+    //320px × 668px
     sp-xs: 'screen and (max-width: 374px)',
-    sp-s: 'screen and (max-width: 468px)',
-    sp: 'screen and (max-width: 600px)',
-    tab-s: 'screen and (max-width: 767px)',
-    tab: 'screen and (max-width: 768px)',
+
+    //375px × 667px
+    //414px × 896px
+    //428px × 964px
+    sp-s: 'screen and (max-width: 467px)',
+
+    //なし
+    sp: 'screen and (max-width: 599px)',
+
+    //600px × 960px
+    //601px × 962px
+    //640px × 1024px
+    tab: 'screen and (max-width: 767px)',
+
+    //768px × 1024px
+    //800px × 1280px
+    //810px × 1024px
     tab-l: 'screen and (max-width: 900px)',
-    tab-xl: 'screen and (max-width: 1080px)',
+
+    //1024px × 768px
+    tab-xl: 'screen and (max-width: 1079px)',
+
+    //1080px × 810px
     pc-s: 'screen and (max-width: 1279px)',
-    pc: 'screen and (max-width: 1366px)',
-    pc-l: 'screen and (max-width: 1536px)',
+
+    //1280px × 720px
+    pc: 'screen and (max-width: 1365px)',
+
+    //1366px × 768px
+    pc-l: 'screen and (max-width: 1535px)',
+
+    //1536px × 864px
     pc-xl: 'screen and (max-width: 1919px)',
 );
 

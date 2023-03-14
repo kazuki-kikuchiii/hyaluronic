@@ -4,6 +4,9 @@
 
 .menu{
   padding: 32px 0 128px;
+  @include m.mq(sp){
+    padding: 32px 0 64px;
+  }
   .section-title{
     @include sec.sec_01;
   }
@@ -17,6 +20,15 @@
       background-color: #fff;
       border: solid 1px var(--color_01);
       position: relative;
+      @include m.mq(pc-s){
+        width: 25%;
+      }
+      @include m.mq(tab-xl){
+        width: 33.333333%;
+      }
+      @include m.mq(tab){
+        width: 50%;
+      }
       &__link{
         display: inline-block;
         display: flex;
@@ -24,8 +36,16 @@
         justify-content: flex-start;
         width: 100%;
         height: 95px;
-        padding: 0 20px;
+        padding: 0 32px 0 20px;
         transition: .3s;
+        @include m.mq(tab){
+          height: 60px;
+        }
+        @include m.mq(sp){
+          font-size: 12px;
+          height: 40px;
+          padding: 0 32px 0 8px;
+        }
         &::after{
           display: inline-block;
           content: "";
@@ -37,6 +57,14 @@
           position: absolute;
           top: calc((100% - 10px) / 2);
           right: 20px;
+          @include m.mq(tab){
+            top: calc((100% - 6px) / 2);
+            width: 6px;
+            height: 6px;
+          }
+          @include m.mq(sp){
+            right: 12px;
+          }
         }
         &:hover{
           background-color: var(--color_02);
@@ -45,11 +73,24 @@
       &:nth-of-type(-n + 5){
         margin-bottom: -1px;
       }
+      &:nth-of-type(-n + 7){
+        @include m.mq(pc-s){
+          margin: -1px -1px -1px 0;
+        }
+      }
       &:nth-of-type(-n + 10){
         margin-right: -1px;
       }
-      &:nth-of-type(11){
+      &:last-of-type{
         margin-top: -1px;
+      }
+      &:last-of-type{
+        margin-top: -1px;
+      }
+      &:nth-last-of-type(-n+3){
+        @include m.mq(pc-s){
+          margin-top: -1px;
+        }
       }
     }
   }

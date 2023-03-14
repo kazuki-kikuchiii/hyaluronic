@@ -4,14 +4,30 @@
 
 .recommend{
   padding-bottom: 128px;
+  @include m.mq(sp){
+    padding-bottom: 64px;
+  }
   .section-title{
     @include sec.sec_01;
     text-align: center;
-    margin-bottom: 128px;
+    margin-bottom: 104px;
+    @include m.mq(pc-l){
+      margin-bottom: 64px;
+    }
+    @include m.mq(sp){
+      margin-bottom: 24px;
+    }
   }
   &__pic-box{
     max-width: 968px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 4vw;
+    @include m.mq(pc-l){
+      max-width: 868px;
+    }
+    @include m.mq(sp){
+      padding: 0;
+    }
   }
 }

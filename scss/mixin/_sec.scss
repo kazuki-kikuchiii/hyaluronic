@@ -8,11 +8,23 @@
   text-transform:uppercase;
   color:var(--color_02);
   line-height: 1;
+  @include m.mq(pc-xl){
+    font-size: 80px;
+  }
+  @include m.mq(sp){
+    font-size: 46px;
+  }
   &__main{
     font-family:var(--font-family-noto);
     font-size: 30px;
     letter-spacing: .09em;
     color: #000;
     font-weight: 500;
+    @include m.mq(pc-xl){
+      font-size: 26px;
+    }
+    @include m.mq(sp){
+      font-size: 24px;
+    }
   }
 }

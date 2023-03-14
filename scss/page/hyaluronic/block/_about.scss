@@ -8,6 +8,9 @@
     @include sec.sec_01;
     text-align: center;
     margin-bottom: 64px;
+    @include m.mq(sp){
+      margin-bottom: 32px;
+    }
   }
   &__t-box{
     max-width: 1200px;
@@ -17,6 +20,15 @@
     font-size: 18px;
     letter-spacing: .06em;
     line-height: 1.7;
+    text-align: justify;
+    @include m.mq(pc-s){
+      width: 88%;
+      padding-bottom: 88px;
+    }
+    @include m.mq(sp){
+      font-size: 14px;
+      padding-bottom: 40px;
+    }
     &--text{
       &:nth-of-type(1){
         margin-bottom: 1em;

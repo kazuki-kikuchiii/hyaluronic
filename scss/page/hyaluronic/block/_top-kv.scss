@@ -1,6 +1,16 @@
 @use "../../../base/vars" as v;
 @use "../../../mixin/breakpoints" as m;
 
+//br改行
+.top-kv{
+  &__br_tab-xl{
+    display: block;
+    @include m.mq(tab-xl){
+      display: none;
+    }
+  }
+}
+
 .top-kv{
   max-width: 1920px;
   width: 100%;
@@ -8,25 +18,82 @@
   background-image: url(../../../../static/image/menu/hyaluronic/pc/top-kv-bg_01.png);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   padding-bottom: 108px;
+  overflow-x: hidden;
+    &__inner{
+      max-width: 1920px;
+      margin: 0 auto;
+      position: relative;
+      @include m.mq(tab-xl){
+        max-width: 600px;
+      }
+      @include m.mq(sp){
+        max-width: 375px;
+      }
+    }
     &__people{
       position: absolute;
       right: 0;
-      bottom: 124px;
-      max-width: 800px;
+      bottom: 26px;
+      max-width: 848px;
+      @include m.mq(pc-xl){
+        max-width: 746px;
+        right: -90px;
+      }
+      @include m.mq(pc-l){
+        max-width: 696px;
+        right: -56px;
+      }
+      @include m.mq(pc-s){
+        max-width: 676px;
+        right: -152px;
+        bottom: 26px;
+      }
+      @include m.mq(tab-xl){
+        max-width: 494px;
+        right: -54px;
+        bottom: 306px;
+      }
+      @include m.mq(sp){
+        max-width: 374px;
+        right: -110px;
+        bottom: 230px; 
+      }
+      @include m.mq(sp-xs){
+        max-width: 360px;
+        right: -100px;
+        bottom: 244px;
+      }
     }
     &__box{
       max-width: 1566px;
       width: 100%;
       margin: 0 auto;
       padding-top: 64px;
+      @include m.mq(pc-xl){
+        padding-top: 30px;
+      }
+      @include m.mq(tab-xl){
+        max-width: 1020px;
+      }
       &--title{
         max-width: 1166px;
         margin: 0 auto;
+        @include m.mq(tab-xl){
+          text-align: center;
+        }
           img{
             max-width: 800px;
             width: 100%;
+            @include m.mq(pc-xl){
+              max-width: 700px;
+            }
+            @include m.mq(pc-l){
+              max-width: 600px;
+            }
+            @include m.mq(sp){
+              max-width: 375px;
+            }
           }
       }
       &__inner{
@@ -38,45 +105,126 @@
         background-repeat: no-repeat;
         background-size: 60% 75%;
         background-position: 6% 25%;
+        @include m.mq(pc-xl){
+          max-width: 1240px;
+          padding-left: 100px;
+        }
+        @include m.mq(pc-l){
+          max-width: 1340px;
+          background-size: 52% 70%
+        }
+        @include m.mq(tab-xl){
+          background: none;
+          padding-left: 0px;
+        }
+        @include m.mq(sp){
+          max-width: 375px;
+        }
       }
       &__lead{
-        font-family:var(--font-family-shippori);
-        max-width: 560px;
-        width: 100%;
-        font-size: 34px;
-        color:var(--color_01);
-        letter-spacing: .04em;
-        padding-left: 2.6em;
-        &__main{
-          display: inline-block;
-          position: relative;
-          &_first{
-            padding-left: 12px;
+        max-width: 1270px;
+        margin: 0 auto;
+        @include m.mq(pc-xl){
+          max-width: 1070px;
+        }
+        @include m.mq(tab-xl){
+          max-width: 560px;
+        }
+        @include m.mq(sp){
+          max-width: 296px;
+        }
+        &__text{
+          font-family:var(--font-family-shippori);
+          width: 100%;
+          font-size: 34px;
+          color:var(--color_01);
+          letter-spacing: .04em;
+          padding-left: 2.6em;
+          @include m.mq(pc-xl){
+            max-width: 400px;
+            padding-left: 0em;
+          }
+          @include m.mq(pc-l){
+            font-size: 30px;
+          }
+          @include m.mq(tab-xl){
+            background-image: url(../../../../static/image/menu/hyaluronic/sp/top-kv-bg_02.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            max-width: 510px;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+          }
+          @include m.mq(sp){
+            font-size: 20px;
+            padding-top: 1.4em;
+            padding-bottom: 2.4em;
+          }
+          &__main{
+            display: inline-block;
+            position: relative;
             margin-bottom: 12px;
-          }
-          &_second{
-            margin-left: 6.4em;
-            white-space: nowrap;
-            margin-top: 12px;
-          }
-          &--icon{
-            position: absolute;
-            top: -24px;
-            left: 0;
-          }
-          &--icon_2{
-            img{
-              max-width: 40px;
-              margin-left: -8px;
+            @include m.mq(tab-xl){
+              margin-left: 12px;
+            }
+            &_first{
+              padding-left: 12px;
+              margin-bottom: 16px;
+              @include m.mq(tab-xl){
+                margin-bottom: 0;
+              }
+            }
+            &_second{
+              margin-left: 6.4em;
+              white-space: nowrap;
+              @include m.mq(tab-xl){
+                margin-left: 0em;
+                margin-top: 4.5em;
+              }
+            }
+            &--icon{
+              position: absolute;
+              top: -24px;
+              left: -18px;
+            }
+            &--icon_2{
+              @include m.mq(tab-xl){
+                text-align: center;
+                max-width: 40px;
+              }
+              img{
+                max-width: 40px;
+                margin: 6px 0 0 0;
+                @include m.mq(tab-xl){
+                  margin-left: 4px;
+                  max-width: 28px;
+                }
+                @include m.mq(sp){
+                  max-width: 20px;
+                }
+              }
             }
           }
-        }
-        &--bg{
-          display: inline-block;
-          background-color: var(--color_01);
-          color: #fff;
-          line-height: 1;
-          margin-left: 3em;
+          &__box{
+            @include m.mq(tab-xl){
+              margin-top: 2em;
+            }
+          }
+          &--bg{
+            display: inline-block;
+            background-color: var(--color_01);
+            color: #fff;
+            line-height: 1;
+            margin-left: 3em;
+            @include m.mq(tab-xl){
+              margin-left: .5em;
+            }
+          }
         }
       }
     }
@@ -88,6 +236,21 @@
       align-items: flex-start;
       justify-content: space-between;
       margin-bottom: 32px;
+      @include m.mq(pc-l){
+        max-width: 508px;
+        height: 232px;
+      }
+      @include m.mq(tab-xl){
+        position: relative;
+        z-index: 1;
+        margin-top: 64px;
+        margin: 64px auto 24px auto;
+      }
+      @include m.mq(sp){
+        max-width: 360px;
+        height: 154px;
+        margin: 12px auto 24px auto;
+      }
       &__item{
         max-width: 192px;
         width: 100%;
@@ -97,6 +260,14 @@
         justify-content: center;
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        @include m.mq(pc-l){
+          max-width: 160px;
+          height: 160px;
+        }
+        @include m.mq(sp){
+          max-width: 110px;
+          height: 110px;
+        }
         &:nth-of-type(1){
           background-image: url(../../../../static/image/menu/hyaluronic/pc/top-kv_02-1.png);
         }
@@ -107,16 +278,34 @@
         &:nth-of-type(3){
           background-image: url(../../../../static/image/menu/hyaluronic/pc/top-kv_02-3.png);
           margin-top: 32px;
+          @include m.mq(sp){
+            margin-top: 0
+            ;
+          }
         }
         &__box{
           font-size: 24px;
           letter-spacing: .04em;
           text-align: center;
+          @include m.mq(pc-l){
+            font-size: 18px;
+          }
+          @include m.mq(sp){
+            font-size: 14px;
+            line-height: 1.5;
+          }
         }
         &--r-text{
           font-size: 32px;
           color: var(--color_01);
           font-weight: bold;
+          @include m.mq(pc-l){
+            font-size: 24px;
+          }
+          @include m.mq(sp){
+            font-size: 18px;
+            margin: 0 -4px 0 -2px;
+          }
         }
       }
     }
@@ -126,6 +315,9 @@
       &__inner{
         max-width: 428px;
         text-align: center;
+        @include m.mq(tab-xl){
+          margin: 0 auto;
+        }
       }
       &__title{
         font-size: 26px;
@@ -135,6 +327,10 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 12px;
+        @include m.mq(sp){
+          font-size: 24px;
+          letter-spacing: .1em;
+        }
         &--money{
           font-family:var(--font-family-roboto);
           color: var(--color_01);
@@ -143,6 +339,10 @@
           font-style: italic;
           letter-spacing: .0em;
           margin-left: 36px;
+          @include m.mq(sp){
+            font-size: 60px;
+            margin-left: 12px;
+          }
         }
         &--tax{
           display: inline-block;
@@ -150,10 +350,18 @@
           margin-top: auto;
           margin-left: 12px;
           padding-bottom: 12px;
+          @include m.mq(sp){
+            letter-spacing: 0em;
+            font-size: 14px;
+            margin-left: 4px;
+          }
         }
       }
       &--notice{
         font-size: 14px;
+        @include m.mq(sp-xs){
+          font-size: 13px;
+        }
       }
     }
 }

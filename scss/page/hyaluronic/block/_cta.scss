@@ -6,12 +6,19 @@
     width: 100%;
     margin: 24px auto;
     text-align: center;
+    @include m.mq(sp){
+      max-width: 262px;
+      margin: 32px auto;
+    }
   &__text{
     font-size: 18px;
     letter-spacing: .04em;
     line-height: 1.5;
     margin-bottom: 16px;
     position: relative;
+    @include m.mq(sp){
+      font-size: 12px;
+    }
     &::before,
     &::after{
       content: "";
@@ -44,6 +51,9 @@
       background-blend-mode: multiply;
       border-radius: 7px;
       transition: .3s;
+      @include m.mq(sp){
+        font-size: 18px;
+      }
       &:hover{
         opacity: 0.6; filter: brightness(100%);
       }
